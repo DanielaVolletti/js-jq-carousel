@@ -36,13 +36,10 @@
 .nav {
   position: absolute;
   bottom: 20px;
-  left: 40%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav i.active {
   opacity: 0.5;
-}
-
-.active {
-  display: inline-block;
 }

@@ -51,7 +51,7 @@ $(document).ready(function(){
       pallinoActive.next().addClass('active');
     }
 
-  }
+  };
 
   // funzione per creare carousel immagini verso sinistra
   function imgPrec() {
@@ -76,7 +76,7 @@ $(document).ready(function(){
       imgActive.prev().addClass('active');
       pallinoActive.prev().addClass('active');
     }
-  }
+  };
 
   function immagineCorrispondente() {
 
@@ -106,7 +106,7 @@ $(document).ready(function(){
 
     // aggiungo opacità nel momento in cui clicco sul pallino
     elementoSelezionato.addClass('active');
-  }
+  };
 
 
 });
