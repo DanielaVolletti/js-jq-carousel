@@ -42,3 +42,7 @@
 .nav i.active {
   opacity: 0.5;
 }
+
+.active {
+  display: inline-block;
+}

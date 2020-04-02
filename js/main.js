@@ -20,6 +20,12 @@ $(document).ready(function(){
     imgPrec
   );
 
+  // click su pallino
+  $('.nav i').click(
+    // callback
+    immagineCorrispondente
+  );
+
   // funzione per creare carousel immagini verso destra
   function imgNext() {
 
@@ -44,6 +50,7 @@ $(document).ready(function(){
       imgActive.next().addClass('active');
       pallinoActive.next().addClass('active');
     }
+
   }
 
   // funzione per creare carousel immagini verso sinistra
@@ -69,6 +76,36 @@ $(document).ready(function(){
       imgActive.prev().addClass('active');
       pallinoActive.prev().addClass('active');
     }
+  }
+
+  function immagineCorrispondente() {
+
+    // creo variabile con immagine
+    var immagineIniziale = $('.images img');
+
+    // rendo immagini invisibili
+    immagineIniziale.removeClass('active');
+
+    // creo variabile con pallini
+    var pallinoIniziale = $('.nav i');
+
+    // elimino opacità pallino
+    pallinoIniziale.removeClass('active');
+
+    //seleziono pallino singolo e lo inserisco in una variabile
+    var elementoSelezionato = $(this);
+
+    // trovo posizione del singolo pallino e la salvo in una variabile
+    var posizione = elementoSelezionato.index();
+
+    // trovo corrispondente posizione dell'immagine
+    var immagineSelezionata = $('.images img').eq(posizione);
+
+    // rendo l'immagine in una data posizione visibile al click
+    immagineSelezionata.addClass('active');
+
+    // aggiungo opacità nel momento in cui clicco sul pallino
+    elementoSelezionato.addClass('active');
   }
 
 
