@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* regole blocco slider */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  height: 80vh;
+}
+
+/* immagini */
+.images {
+  width: 80%;
+}
+
+.images img {
+  width: 100%;
+  display: none;
+}
+
+.images img.active {
+  display: inline-block;
+}
+
+/* regole navigazione */
+
+.prev i, .next i{
+  font-size: 40px;
+}
+
+.nav {
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+}
+
+.nav i.active {
+  opacity: 0.5;
+}
