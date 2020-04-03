@@ -81,16 +81,16 @@ $(document).ready(function(){
   function immagineCorrispondente() {
 
     // creo variabile con immagine
-    var immagineIniziale = $('.images img');
+    var imgActive = $('.images img.active');
 
     // rendo immagini invisibili
-    immagineIniziale.removeClass('active');
+    imgActive.removeClass('active');
 
     // creo variabile con pallini
-    var pallinoIniziale = $('.nav i');
+    var pallinoActive = $('.nav i.active');
 
     // elimino opacità pallino
-    pallinoIniziale.removeClass('active');
+    pallinoActive.removeClass('active');
 
     //seleziono pallino singolo e lo inserisco in una variabile
     var elementoSelezionato = $(this);
@@ -99,10 +99,10 @@ $(document).ready(function(){
     var posizione = elementoSelezionato.index();
 
     // trovo corrispondente posizione dell'immagine
-    var immagineSelezionata = $('.images img').eq(posizione);
+    var imgActive = $('.images img').eq(posizione);
 
     // rendo l'immagine in una data posizione visibile al click
-    immagineSelezionata.addClass('active');
+    imgActive.addClass('active');
 
     // aggiungo opacità nel momento in cui clicco sul pallino
     elementoSelezionato.addClass('active');
